@@ -1,0 +1,74 @@
+h1, h2, h3, h4, h5 {
+  font-family: "Playfair Display WF"; }
+
+#primary-nav {
+  background-color: #373a3c; }
+  #primary-nav nav {
+    float: right; }
+  #primary-nav .navbar-brand,
+  #primary-nav .nav-item {
+    color: #ffffff;
+    font-family: "Playfair Display WF";
+    line-height: 1em; }
+    #primary-nav .navbar-brand:hover,
+    #primary-nav .nav-item:hover {
+      color: #ffffff; }
+
+#content {
+  margin-top: 1em; }
+  #content a {
+    color: #3D8799; }
+  #content .jumbotron {
+    background-color: #ffffff; }
+    #content .jumbotron .lead {
+      font-family: "Playfair Display WF"; }
+    #content .jumbotron .gum {
+      color: #3D8799; }
+  #content .explanation {
+    font-family: "Playfair Display WF";
+    line-height: 2; }
+  #content .explanation::first-line {
+    color: #3D8799;
+    font-weight: 800; }
+  #content form label {
+    color: #747a7f;
+    font-family: "Playfair Display WF";
+    font-weight: 800; }
+  #content form input[type="text"] {
+    font-family: "Source Sans Pro";
+    font-weight: 100; }
+  #content form .btn-primary {
+    background-color: #3d8799;
+    border: 1px solid #3d8799;
+    color: #f8f9f9;
+    font-family: "Playfair Display WF";
+    font-weight: 400; }
+    #content form .btn-primary:hover {
+      background-color: #87c1cf;
+      border: 1px solid #87c1cf; }
+
+#text-and-form-area {
+  margin-bottom: 5em; }
+
+#chart-area {
+  display: none;
+  padding-bottom: 2em; }
+  #chart-area h2 {
+    border-bottom: 1px solid #3D8799;
+    font-size: 2rem;
+    margin-bottom: 1em; }
+
+svg text {
+  font-family: "Playfair Display WF"; }
+svg path {
+  fill: transparent; }
+svg .axis .domain {
+  stroke: rgba(0, 0, 0, 0.5);
+  shape-rendering: crispEdges;
+  stroke-dasharray: 2,2; }
+svg .axis line {
+  stroke: rgba(0, 0, 0, 0.5);
+  shape-rendering: crispEdges;
+  stroke-dasharray: 2,2; }
+
+/*# sourceMappingURL=style.css.map */

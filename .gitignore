@@ -1,0 +1,6 @@
+/vendor/
+/bin/
+/config/config.php
+/public/data.json
+.sass-cache/
+.DS_Store

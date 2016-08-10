@@ -1,0 +1,105 @@
+$lime: #00FFA5;
+$blue: #3D8799;
+$white: #ffffff;
+$black: #373a3c;
+
+h1, h2, h3, h4, h5 {
+	font-family: "Playfair Display WF";
+}
+
+#primary-nav {
+	background-color: $black;
+	nav {
+		float: right;
+	}
+	.navbar-brand,
+	.nav-item {
+		color: $white;
+		font-family: "Playfair Display WF";
+		line-height: 1em;
+		&:hover {
+			color: $white;
+		}
+	}
+}
+
+#content {
+	margin-top: 1em;
+	a {
+		color: $blue;
+	}
+	.jumbotron {
+		background-color: $white;
+		.lead {
+			font-family: "Playfair Display WF";
+		}
+		.gum {
+			color: $blue;
+		}
+	}
+	.explanation {
+		font-family: "Playfair Display WF";
+		line-height: 2;
+	}
+	.explanation::first-line {
+		color: $blue;
+		font-weight: 800;
+	}
+	form {
+		label {
+			color: lighten( $black, 25% );
+			font-family: "Playfair Display WF";
+			font-weight: 800;
+		}
+		input[type="text"] {
+			font-family: "Source Sans Pro";
+			font-weight: 100;
+		}
+		.btn-primary {
+			background-color: lighten( $blue, 0% );
+			border: 1px solid lighten( $blue, 0% );
+			color: lighten( $black, 75% );
+			font-family: "Playfair Display WF";
+			font-weight: 400;
+			&:hover {
+				background-color: lighten( $blue, 25% );
+				border: 1px solid lighten( $blue, 25% );
+			}
+		}
+	}
+}
+
+#text-and-form-area {
+	margin-bottom: 5em;
+}
+
+#chart-area {
+	display: none;
+	padding-bottom: 2em;
+	h2 {
+		border-bottom: 1px solid $blue;
+		font-size: 2rem;
+		margin-bottom: 1em;
+	}
+}
+
+svg {
+	text {
+		font-family: "Playfair Display WF";
+	}
+	path {
+		fill: transparent;
+	}
+	.axis {
+		.domain {
+			stroke: rgba(0,0,0,0.5);
+			shape-rendering: crispEdges;
+			stroke-dasharray: 2,2;
+		}
+		line {
+			stroke: rgba(0,0,0,0.5);
+			shape-rendering: crispEdges;
+			stroke-dasharray: 2,2;
+		}
+	}
+}

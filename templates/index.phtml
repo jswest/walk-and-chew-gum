@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>This is Gum.</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/fonts.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+
+		<nav id="primary-nav" class="navbar navbar-full navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-sm-10 offset-sm-1">
+						<a class="navbar-brand" href="/">This is Gum.</a>
+						<nav class="navbar-nav">
+
+						</nav>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<div id="content">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-sm-10 offset-sm-1">
+						<div class="jumbotron jumbotron-fluid">
+							<h1 class="display-3">Welcome to <span class="gum">Gum<span class="gum">.</h1>
+							<p class="lead">Can Twitter really walk and chew gum at the same time?</p>
+						</div>
+					</div>
+				</div>
+				<div id="text-and-form-area" class="row">
+					<div class="col-sm-4 offset-sm-1">
+						<p class="explanation">Compare how often a person on Twitter uses different sets of terms over time. In the form on the right, enter the user's handle and two comma-separated lists of words. Gum will, after a brief moment of number-crunching, show you the relative frequency with which that person wrote tweets containing one of more of the words in the list. Importantly, it can only pull the most recent 200 tweets, but if there's interest in the project, I can add the ability to get more. Also, please note that this is a very young project, and it probably has bugs. Sorry. <a target="_blank" href="https://twitter.com/mattyglesias">Matthew Yglesias</a>, <a target="_blank" href="https://twitter.com/freddiedeboer">Freddie deBoer</a>, and, <a target="_blank" href="https://twitter.com/bobfrutts/status/763020578806636544">especially</a>, a Twitter user named <a target="_blank" href="https://twitter.com/bobfrutts">Bob</a> all <a target="_blank" href="https://twitter.com/mattyglesias/status/763009757838008320">inspired this project</a>. <a target="_blank" href="https://twitter.com/john_s_west">John West</a>, built it, and you can <a target="_blank" href="https://twitter.com/john_s_west">DM on Twitter</a> to learn more about how.</p>
+					</div>
+					<div class="col-sm-4 offset-sm-1">
+						<?php if ( $verified === true ) { ?>
+							<form id="primary-form">
+								<div class="form-group">
+									<label>Handle</label>
+									<div class="input-group">
+										<span class="input-group-addon">@</span>
+										<input id="primary-form-handle" type="text" class="form-control" placeholder="handle">
+									</div>
+								</div>
+								<div class="form-group">
+									<label>First list of terms</label>
+									<input id="primary-form-base" type="text" class="form-control" placeholder="trump">
+								</div>
+								<div class="form-group">
+									<label>Second list of terms</label>
+									<input id="primary-form-comparison" type="text" class="form-control" placeholder="sanders">
+								</div>
+								<div class="form-group">
+									<input id="primary-form-submit" type="submit" class="btn btn-primary" value="Compare them.">
+								</div>
+							</form>
+						<?php } else { ?>
+							<h1 class="display-2"><a href="login">Login with Twitter.</a></h1>
+						<?php } ?>
+					</div>
+				</div>
+				<div id="chart-area">
+					<div class="row">
+						<div class="col-sm-10 offset-sm-1">
+							<h2 class="display-4">Results</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div id="bar-chart" class="col-sm-3 offset-sm-1"></div>
+						<div id="line-chart" class="col-sm-5 offset-sm-1"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="js/jquery-3.1.0.min.js"></script>
+		<script src="js/tether.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/d3.min.js"></script>
+		<script src="js/main.js"></script>
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-82272828-1', 'auto');
+			ga('send', 'pageview');
+		</script>
+	</body>
+</html>
